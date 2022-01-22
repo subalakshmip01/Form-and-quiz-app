@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>REGISTRATION FORM</title>
+</head>
+	<style>
+		h1 {
+			color: blue;
+			font-weight: 500;
+		}
+		body {
+			padding: 15px;
+			margin: 0;
+			background: linear-gradient(45deg,skyblue, #80ffb0);
+		}
+		form{
+			display: block;
+			width: 50%;
+			padding: 15px;
+			margin: 0 auto;
+			background-color: white;
+			border-radius: 15px;
+			box-shadow: 0 0 5px gray;
+		}
+		input{
+			padding: 10px;
+			margin: 10px 0;
+			width: 100%;
+			border-radius: 5px;
+			border: 1px solid gray;
+		}
+		button{
+			padding: 10px 20px;
+			border-radius: 10px;
+			background-color: skyblue;
+			color: white;
+			border: none;
+			font-size: 1rem;
+			display: block;
+			margin: 0 auto;
+		}
+		button:hover{
+			background-color: #80ffb0;
+		}
+		input:focus{
+            outline: none !important;
+			border: 1px solid skyblue;
+		    box-shadow: 0 0 10px #80ffb0;
+		}
+	</style>
+<body>
+	<h1 style="text-align:center;">REGISTRATION FORM</h1>
+	<form action='\blank'>
+		<label > <strong>First Name:</strong></label> <br>
+ 		<input type="text" name="fname"> <br>
+		<label><strong>Last Name:</strong></label> <br>
+ 	<input type="text" name="lname"><br>
+	<label style="display:inline-block; margin: 10px 0;"><strong>State</strong></label>
+	<select name="Select">
+	  <datalist id="states">
+      <option value="Andhra Pradesh">Andhra Pradesh</option>
+      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+      <option value="Assam">Assam</option>
+      <option value="Bihar">Bihar</option> 
+      <option value="Chhattisgarh">Chhattisgarh</option> 
+      <option value="Goa">Goa</option> 
+      <option value="Gujarat">Gujarat</option> 
+      <option value="Haryana">Haryana</option> 
+      <option value="Himachal Pradesh">Himachal Pradesh</option>
+      <option value="Jharkhand">Jharkhand</option> 
+      <option value="Karnataka">Karnataka</option> 
+      <option value="Kerala">Kerala</option>
+      <option value="Madhya Pradesh">Madhya Pradesh</option> 
+      <option value="Maharashtra">Maharashtra</option> 
+      <option value="Manipur">Manipur</option> 
+      <option value="Meghalaya">Meghalaya</option>
+      <option value="Mizoram Aizawl">Mizoram Aizawl</option>
+      <option value="Nagaland">Nagaland</option> 
+      <option value="Odisha">Odisha</option> 
+      <option value="Punjab">Punjab</option> 
+      <option value="Rajasthan">Rajasthan</option> 
+      <option value="Sikkim">Sikkim</option> 
+      <option value="Tamil Nadu">Tamil Nadu</option> 
+      <option value="Telangana ">Telangana</option>
+      <option value="Tripura">Tripura</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+      <option value="Uttarakhand">Uttarakhand</option> 
+      <option value="West Bengal">West Bengal</option> 
+    </datalist>
+	</select>
+	<br>
+	<label for="email"><b>Email</b></label> <br>
+		<input type="email" placeholder="Email" id="email" name="email" required>
+	<br>
+	<label for="password"><b>Password</b></label> <br>
+    	<input type="password" placeholder="Password" id="password" name="password" required>
+	<br>
+	<label for="pass-repeat"><b>Repeat Password</b></label> <br>
+    	<input type="password" placeholder="Repeat Password" id="pass-repeat" name="pass-repeat" required><br>
+	<p style="margin: 0">I Agree To Terms And Conditions: <input style="width: auto; padding: 0" type="checkbox" name="agree" required></p><br>
+		<button type="submit" value="submit">Submit</button>
+	</form>
+</body>
+</html>

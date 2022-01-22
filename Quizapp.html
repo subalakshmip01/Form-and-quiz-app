@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play Quiz</title>
+    <script>
+        let time = 31;
+        function changegreen(id){
+            const arr = ['ans1', 'ans3', 'ans6', 'ans8', 'ans9'];
+            const d = document.getElementById(arr[id]);
+            d.style.background = "green"; 
+            if (id  != 2) time = 31;
+        }
+        function changered(id) {
+            const arr = ['ans2', 'ans4', 'ans5', 'ans7', 'ans10'];
+            const d = document.getElementById(arr[id]);
+            d.style.background = "red"; 
+            if (id != 2) time = 31; 
+        }
+        function start( ) {
+          const timer = document.getElementById('timer');
+          setInterval(() => {
+            timer.innerText = `Time left : ${Math.max(--time, 0)}`;
+          }, 1000);
+        }
+        window.onload = start;
+    </script>
+    <style>
+      header{
+        color: #0f0f0e;
+        margin: 5px;
+        padding: 1px;
+        text-align: center;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        border: rgb(84, 230, 186);
+        border-radius: 5px;
+        border-width: 5px;
+        background-color: rgb(246, 243, 250);
+      }
+      body{
+        margin: 5%;
+        padding: 5%;
+        align-content: center;
+        background-color: #007bff;
+      }
+      .Q{
+        background-color: purple ;
+        border: rgb(178, 209, 128);
+        border-radius: 15px;
+        align-content: center;
+        border-bottom: rgb(158, 149, 145);
+        border-color: slateblue;
+        border-width: 5px;
+        margin: 3px;
+        padding: 7px;
+
+      }
+      .Q button
+      {
+        color: rgb(161, 3, 3);
+        background-color: rgb(25, 186, 197);
+        text-overflow: ellipsis;
+        border-radius: 10px;
+        padding: 2px;
+        font-size: 18px;
+        font-weight: 100;
+        font-style: italic;
+        display: flex;
+      }
+      .main{
+        background-color: rgb(243, 134, 247) ;
+        border-width: 10px;
+        border-radius: 8px;
+        align-items: center ;
+        margin: 2%;
+        padding: 12px;        
+      }
+      .clc{
+        font-size: 25px;
+        background-color: #007bff;
+        color: rgb(243, 236, 236);
+        align-items: center;
+        font-weight: 100;
+        text-align: center;
+        border: rgb(138, 138, 233);
+        border-radius: 10px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        padding: 5px;
+        margin: 3px;
+      }
+      .Logo{
+        border: rgb(229, 243, 35);
+        padding: 1%;
+        margin: 1%;
+        display: inline-flex;
+        background-color: rgb(240, 243, 233);
+        margin-left: 460px;
+      }
+      
+    </style>
+</head>
+    <body>
+      <header><h1>Online Quiz</h1></header>
+        <div class="clc">
+          <h3 id='timer'>Time Left </h3>
+          <p id="Cd"> Thirty seconds for each question</p>
+        </div>
+        <div class="main">
+        <div class="Q">
+          <h2>Q1. 'OS' computer abbreviation usually means?</h2>
+          <button id="ans1" onclick="changegreen(0)">Operating System</button>
+          <p></p>
+          <button id="ans2" onclick="changered(0)">Optical Sensor  </button> 
+        </div>
+        <div class="Q"> 
+          <h2>Q2.'.mpg' extension refers usually to what kind of file?</h2>
+          <button id="ans3" onclick="changegreen(1)">Animation/movie file</button>
+          <p></p>
+          <button id="ans4" onclick="changered(1)">Image file </button>  
+        </div>
+        <div class="Q">
+          <h2>Q3. Who developed Yahoo?</h2>
+          <button id="ans5" onclick="changered(2)">Steve case & Jeff Bezos</button>
+          <p></p>
+          <button id="ans6" onclick="changegreen(2)">David Filo & Jerry Yang</button>  
+        </div>
+        <div class="Q">
+          <h2>Q4. The term PLC stand for?</h2>
+          <button id="ans7" onclick="changered(3)">Program List Control</button>
+          <p></p>
+          <button id="ans8" onclick="changegreen(3)">Programmable Logic Controller</button>  
+        </div>
+        <div class="Q">
+          <h2>Q5. 'DB' computer abbreviation usually means?</h2>
+          <button id="ans9" onclick="changegreen(4)">Database</button>
+          <p></p>
+          <button id="ans10" onclick="changered(4)">Datablock</button>  
+        </div>
+        </div>
+        
+        <footer >
+          <img src="https://techkilla.com/wp-content/uploads/2021/09/TK-LOGO_TransBG-1.png" class="Logo" >
+        </footer>
+    </body>
+</html>
